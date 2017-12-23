@@ -1,0 +1,466 @@
+diff --git a/generic/include/clc/cl_khr_global_int32_base_atomics/atom_add.h b/generic/include/clc/cl_khr_global_int32_base_atomics/atom_add.h
+index 9740b3d..10602c7 100644
+--- a/generic/include/clc/cl_khr_global_int32_base_atomics/atom_add.h
++++ b/generic/include/clc/cl_khr_global_int32_base_atomics/atom_add.h
+@@ -1,2 +1,2 @@
+-_CLC_OVERLOAD _CLC_DECL int atom_add(global int *p, int val);
+-_CLC_OVERLOAD _CLC_DECL unsigned int atom_add(global unsigned int *p, unsigned int val);
++_CLC_OVERLOAD _CLC_DECL int atom_add(volatile global int *p, int val);
++_CLC_OVERLOAD _CLC_DECL unsigned int atom_add(volatile global unsigned int *p, unsigned int val);
+diff --git a/generic/include/clc/cl_khr_global_int32_base_atomics/atom_cmpxchg.h b/generic/include/clc/cl_khr_global_int32_base_atomics/atom_cmpxchg.h
+index 168f423..d84a9eb 100644
+--- a/generic/include/clc/cl_khr_global_int32_base_atomics/atom_cmpxchg.h
++++ b/generic/include/clc/cl_khr_global_int32_base_atomics/atom_cmpxchg.h
+@@ -1,2 +1,2 @@
+-_CLC_OVERLOAD _CLC_DECL int atom_cmpxchg(global int *p, int cmp, int val);
+-_CLC_OVERLOAD _CLC_DECL unsigned int atom_cmpxchg(global unsigned int *p, unsigned int cmp, unsigned int val);
++_CLC_OVERLOAD _CLC_DECL int atom_cmpxchg(volatile global int *p, int cmp, int val);
++_CLC_OVERLOAD _CLC_DECL unsigned int atom_cmpxchg(volatile global unsigned int *p, unsigned int cmp, unsigned int val);
+diff --git a/generic/include/clc/cl_khr_global_int32_base_atomics/atom_dec.h b/generic/include/clc/cl_khr_global_int32_base_atomics/atom_dec.h
+index bbc872c..d3c1c45 100644
+--- a/generic/include/clc/cl_khr_global_int32_base_atomics/atom_dec.h
++++ b/generic/include/clc/cl_khr_global_int32_base_atomics/atom_dec.h
+@@ -1,2 +1,2 @@
+-_CLC_OVERLOAD _CLC_DECL int atom_dec(global int *p);
+-_CLC_OVERLOAD _CLC_DECL unsigned int atom_dec(global unsigned int *p);
++_CLC_OVERLOAD _CLC_DECL int atom_dec(volatile global int *p);
++_CLC_OVERLOAD _CLC_DECL unsigned int atom_dec(volatile global unsigned int *p);
+diff --git a/generic/include/clc/cl_khr_global_int32_base_atomics/atom_inc.h b/generic/include/clc/cl_khr_global_int32_base_atomics/atom_inc.h
+index 050747c..712374d 100644
+--- a/generic/include/clc/cl_khr_global_int32_base_atomics/atom_inc.h
++++ b/generic/include/clc/cl_khr_global_int32_base_atomics/atom_inc.h
+@@ -1,2 +1,2 @@
+-_CLC_OVERLOAD _CLC_DECL int atom_inc(global int *p);
+-_CLC_OVERLOAD _CLC_DECL unsigned int atom_inc(global unsigned int *p);
++_CLC_OVERLOAD _CLC_DECL int atom_inc(volatile global int *p);
++_CLC_OVERLOAD _CLC_DECL unsigned int atom_inc(volatile global unsigned int *p);
+diff --git a/generic/include/clc/cl_khr_global_int32_base_atomics/atom_sub.h b/generic/include/clc/cl_khr_global_int32_base_atomics/atom_sub.h
+index c435c72..b065db9 100644
+--- a/generic/include/clc/cl_khr_global_int32_base_atomics/atom_sub.h
++++ b/generic/include/clc/cl_khr_global_int32_base_atomics/atom_sub.h
+@@ -1,2 +1,2 @@
+-_CLC_OVERLOAD _CLC_DECL int atom_sub(global int *p, int val);
+-_CLC_OVERLOAD _CLC_DECL unsigned int atom_sub(global unsigned int *p, unsigned int val);
++_CLC_OVERLOAD _CLC_DECL int atom_sub(volatile global int *p, int val);
++_CLC_OVERLOAD _CLC_DECL unsigned int atom_sub(volatile global unsigned int *p, unsigned int val);
+diff --git a/generic/include/clc/cl_khr_global_int32_base_atomics/atom_xchg.h b/generic/include/clc/cl_khr_global_int32_base_atomics/atom_xchg.h
+index 6a18e9e..0493b85 100644
+--- a/generic/include/clc/cl_khr_global_int32_base_atomics/atom_xchg.h
++++ b/generic/include/clc/cl_khr_global_int32_base_atomics/atom_xchg.h
+@@ -1,2 +1,2 @@
+-_CLC_OVERLOAD _CLC_DECL int atom_xchg(global int *p, int val);
+-_CLC_OVERLOAD _CLC_DECL unsigned int atom_xchg(global unsigned int *p, unsigned int val);
++_CLC_OVERLOAD _CLC_DECL int atom_xchg(volatile global int *p, int val);
++_CLC_OVERLOAD _CLC_DECL unsigned int atom_xchg(volatile global unsigned int *p, unsigned int val);
+diff --git a/generic/include/clc/cl_khr_global_int32_extended_atomics/atom_and.h b/generic/include/clc/cl_khr_global_int32_extended_atomics/atom_and.h
+index 19df7d6..2364fe9 100644
+--- a/generic/include/clc/cl_khr_global_int32_extended_atomics/atom_and.h
++++ b/generic/include/clc/cl_khr_global_int32_extended_atomics/atom_and.h
+@@ -1,2 +1,2 @@
+-_CLC_OVERLOAD _CLC_DECL int atom_and(global int *p, int val);
+-_CLC_OVERLOAD _CLC_DECL unsigned int atom_and(global unsigned int *p, unsigned int val);
++_CLC_OVERLOAD _CLC_DECL int atom_and(volatile global int *p, int val);
++_CLC_OVERLOAD _CLC_DECL unsigned int atom_and(volatile global unsigned int *p, unsigned int val);
+diff --git a/generic/include/clc/cl_khr_global_int32_extended_atomics/atom_max.h b/generic/include/clc/cl_khr_global_int32_extended_atomics/atom_max.h
+index b46ce29..4e876da 100644
+--- a/generic/include/clc/cl_khr_global_int32_extended_atomics/atom_max.h
++++ b/generic/include/clc/cl_khr_global_int32_extended_atomics/atom_max.h
+@@ -1,2 +1,2 @@
+-_CLC_OVERLOAD _CLC_DECL int atom_max(global int *p, int val);
+-_CLC_OVERLOAD _CLC_DECL unsigned int atom_max(global unsigned int *p, unsigned int val);
++_CLC_OVERLOAD _CLC_DECL int atom_max(volatile global int *p, int val);
++_CLC_OVERLOAD _CLC_DECL unsigned int atom_max(volatile global unsigned int *p, unsigned int val);
+diff --git a/generic/include/clc/cl_khr_global_int32_extended_atomics/atom_min.h b/generic/include/clc/cl_khr_global_int32_extended_atomics/atom_min.h
+index 0e458eb..46b8b83 100644
+--- a/generic/include/clc/cl_khr_global_int32_extended_atomics/atom_min.h
++++ b/generic/include/clc/cl_khr_global_int32_extended_atomics/atom_min.h
+@@ -1,2 +1,2 @@
+-_CLC_OVERLOAD _CLC_DECL int atom_min(global int *p, int val);
+-_CLC_OVERLOAD _CLC_DECL unsigned int atom_min(global unsigned int *p, unsigned int val);
++_CLC_OVERLOAD _CLC_DECL int atom_min(volatile global int *p, int val);
++_CLC_OVERLOAD _CLC_DECL unsigned int atom_min(volatile global unsigned int *p, unsigned int val);
+diff --git a/generic/include/clc/cl_khr_global_int32_extended_atomics/atom_or.h b/generic/include/clc/cl_khr_global_int32_extended_atomics/atom_or.h
+index 91cde56..d1e924d 100644
+--- a/generic/include/clc/cl_khr_global_int32_extended_atomics/atom_or.h
++++ b/generic/include/clc/cl_khr_global_int32_extended_atomics/atom_or.h
+@@ -1,2 +1,2 @@
+-_CLC_OVERLOAD _CLC_DECL int atom_or(global int *p, int val);
+-_CLC_OVERLOAD _CLC_DECL unsigned int atom_or(global unsigned int *p, unsigned int val);
++_CLC_OVERLOAD _CLC_DECL int atom_or(volatile global int *p, int val);
++_CLC_OVERLOAD _CLC_DECL unsigned int atom_or(volatile global unsigned int *p, unsigned int val);
+diff --git a/generic/include/clc/cl_khr_global_int32_extended_atomics/atom_xor.h b/generic/include/clc/cl_khr_global_int32_extended_atomics/atom_xor.h
+index f787849..9646c87 100644
+--- a/generic/include/clc/cl_khr_global_int32_extended_atomics/atom_xor.h
++++ b/generic/include/clc/cl_khr_global_int32_extended_atomics/atom_xor.h
+@@ -1,2 +1,2 @@
+-_CLC_OVERLOAD _CLC_DECL int atom_xor(global int *p, int val);
+-_CLC_OVERLOAD _CLC_DECL unsigned int atom_xor(global unsigned int *p, unsigned int val);
++_CLC_OVERLOAD _CLC_DECL int atom_xor(volatile global int *p, int val);
++_CLC_OVERLOAD _CLC_DECL unsigned int atom_xor(volatile global unsigned int *p, unsigned int val);
+diff --git a/generic/include/clc/cl_khr_local_int32_base_atomics/atom_add.h b/generic/include/clc/cl_khr_local_int32_base_atomics/atom_add.h
+index 096d011..8999920 100644
+--- a/generic/include/clc/cl_khr_local_int32_base_atomics/atom_add.h
++++ b/generic/include/clc/cl_khr_local_int32_base_atomics/atom_add.h
+@@ -1,2 +1,2 @@
+-_CLC_OVERLOAD _CLC_DECL int atom_add(local int *p, int val);
+-_CLC_OVERLOAD _CLC_DECL unsigned int atom_add(local unsigned int *p, unsigned int val);
++_CLC_OVERLOAD _CLC_DECL int atom_add(volatile local int *p, int val);
++_CLC_OVERLOAD _CLC_DECL unsigned int atom_add(volatile local unsigned int *p, unsigned int val);
+diff --git a/generic/include/clc/cl_khr_local_int32_base_atomics/atom_cmpxchg.h b/generic/include/clc/cl_khr_local_int32_base_atomics/atom_cmpxchg.h
+index e10a84f..c967d36 100644
+--- a/generic/include/clc/cl_khr_local_int32_base_atomics/atom_cmpxchg.h
++++ b/generic/include/clc/cl_khr_local_int32_base_atomics/atom_cmpxchg.h
+@@ -1,2 +1,2 @@
+-_CLC_OVERLOAD _CLC_DECL int atom_cmpxchg(local int *p, int cmp, int val);
+-_CLC_OVERLOAD _CLC_DECL unsigned int atom_cmpxchg(local unsigned int *p, unsigned int cmp, unsigned int val);
++_CLC_OVERLOAD _CLC_DECL int atom_cmpxchg(volatile local int *p, int cmp, int val);
++_CLC_OVERLOAD _CLC_DECL unsigned int atom_cmpxchg(volatile local unsigned int *p, unsigned int cmp, unsigned int val);
+diff --git a/generic/include/clc/cl_khr_local_int32_base_atomics/atom_dec.h b/generic/include/clc/cl_khr_local_int32_base_atomics/atom_dec.h
+index e74d8fc..7bb33c9 100644
+--- a/generic/include/clc/cl_khr_local_int32_base_atomics/atom_dec.h
++++ b/generic/include/clc/cl_khr_local_int32_base_atomics/atom_dec.h
+@@ -1,2 +1,2 @@
+-_CLC_OVERLOAD _CLC_DECL int atom_dec(local int *p);
+-_CLC_OVERLOAD _CLC_DECL unsigned int atom_dec(local unsigned int *p);
++_CLC_OVERLOAD _CLC_DECL int atom_dec(volatile local int *p);
++_CLC_OVERLOAD _CLC_DECL unsigned int atom_dec(volatile local unsigned int *p);
+diff --git a/generic/include/clc/cl_khr_local_int32_base_atomics/atom_inc.h b/generic/include/clc/cl_khr_local_int32_base_atomics/atom_inc.h
+index 718f1f2..96e6f30 100644
+--- a/generic/include/clc/cl_khr_local_int32_base_atomics/atom_inc.h
++++ b/generic/include/clc/cl_khr_local_int32_base_atomics/atom_inc.h
+@@ -1,2 +1,2 @@
+-_CLC_OVERLOAD _CLC_DECL int atom_inc(local int *p);
+-_CLC_OVERLOAD _CLC_DECL unsigned int atom_inc(local unsigned int *p);
++_CLC_OVERLOAD _CLC_DECL int atom_inc(volatile local int *p);
++_CLC_OVERLOAD _CLC_DECL unsigned int atom_inc(volatile local unsigned int *p);
+diff --git a/generic/include/clc/cl_khr_local_int32_base_atomics/atom_sub.h b/generic/include/clc/cl_khr_local_int32_base_atomics/atom_sub.h
+index 6363780..0228fa4 100644
+--- a/generic/include/clc/cl_khr_local_int32_base_atomics/atom_sub.h
++++ b/generic/include/clc/cl_khr_local_int32_base_atomics/atom_sub.h
+@@ -1,2 +1,2 @@
+-_CLC_OVERLOAD _CLC_DECL int atom_sub(local int *p, int val);
+-_CLC_OVERLOAD _CLC_DECL unsigned int atom_sub(local unsigned int *p, unsigned int val);
++_CLC_OVERLOAD _CLC_DECL int atom_sub(volatile local int *p, int val);
++_CLC_OVERLOAD _CLC_DECL unsigned int atom_sub(volatile local unsigned int *p, unsigned int val);
+diff --git a/generic/include/clc/cl_khr_local_int32_base_atomics/atom_xchg.h b/generic/include/clc/cl_khr_local_int32_base_atomics/atom_xchg.h
+index c5a1f09..e530158 100644
+--- a/generic/include/clc/cl_khr_local_int32_base_atomics/atom_xchg.h
++++ b/generic/include/clc/cl_khr_local_int32_base_atomics/atom_xchg.h
+@@ -1,2 +1,2 @@
+-_CLC_OVERLOAD _CLC_DECL int atom_xchg(local int *p, int val);
+-_CLC_OVERLOAD _CLC_DECL unsigned int atom_xchg(local unsigned int *p, unsigned int val);
++_CLC_OVERLOAD _CLC_DECL int atom_xchg(volatile local int *p, int val);
++_CLC_OVERLOAD _CLC_DECL unsigned int atom_xchg(volatile local unsigned int *p, unsigned int val);
+diff --git a/generic/include/clc/cl_khr_local_int32_extended_atomics/atom_and.h b/generic/include/clc/cl_khr_local_int32_extended_atomics/atom_and.h
+index 96d7b1a..0af8194 100644
+--- a/generic/include/clc/cl_khr_local_int32_extended_atomics/atom_and.h
++++ b/generic/include/clc/cl_khr_local_int32_extended_atomics/atom_and.h
+@@ -1,2 +1,2 @@
+-_CLC_OVERLOAD _CLC_DECL int atom_and(local int *p, int val);
+-_CLC_OVERLOAD _CLC_DECL unsigned int atom_and(local unsigned int *p, unsigned int val);
++_CLC_OVERLOAD _CLC_DECL int atom_and(volatile local int *p, int val);
++_CLC_OVERLOAD _CLC_DECL unsigned int atom_and(volatile local unsigned int *p, unsigned int val);
+diff --git a/generic/include/clc/cl_khr_local_int32_extended_atomics/atom_max.h b/generic/include/clc/cl_khr_local_int32_extended_atomics/atom_max.h
+index 7d6b17d..e3b23dd 100644
+--- a/generic/include/clc/cl_khr_local_int32_extended_atomics/atom_max.h
++++ b/generic/include/clc/cl_khr_local_int32_extended_atomics/atom_max.h
+@@ -1,2 +1,2 @@
+-_CLC_OVERLOAD _CLC_DECL int atom_max(local int *p, int val);
+-_CLC_OVERLOAD _CLC_DECL unsigned int atom_max(local unsigned int *p, unsigned int val);
++_CLC_OVERLOAD _CLC_DECL int atom_max(volatile local int *p, int val);
++_CLC_OVERLOAD _CLC_DECL unsigned int atom_max(volatile local unsigned int *p, unsigned int val);
+diff --git a/generic/include/clc/cl_khr_local_int32_extended_atomics/atom_min.h b/generic/include/clc/cl_khr_local_int32_extended_atomics/atom_min.h
+index ddb6cf3..ec11c96 100644
+--- a/generic/include/clc/cl_khr_local_int32_extended_atomics/atom_min.h
++++ b/generic/include/clc/cl_khr_local_int32_extended_atomics/atom_min.h
+@@ -1,2 +1,2 @@
+-_CLC_OVERLOAD _CLC_DECL int atom_min(local int *p, int val);
+-_CLC_OVERLOAD _CLC_DECL unsigned int atom_min(local unsigned int *p, unsigned int val);
++_CLC_OVERLOAD _CLC_DECL int atom_min(volatile local int *p, int val);
++_CLC_OVERLOAD _CLC_DECL unsigned int atom_min(volatile local unsigned int *p, unsigned int val);
+diff --git a/generic/include/clc/cl_khr_local_int32_extended_atomics/atom_or.h b/generic/include/clc/cl_khr_local_int32_extended_atomics/atom_or.h
+index 518c256..abd8ac4 100644
+--- a/generic/include/clc/cl_khr_local_int32_extended_atomics/atom_or.h
++++ b/generic/include/clc/cl_khr_local_int32_extended_atomics/atom_or.h
+@@ -1,2 +1,2 @@
+-_CLC_OVERLOAD _CLC_DECL int atom_or(local int *p, int val);
+-_CLC_OVERLOAD _CLC_DECL unsigned int atom_or(local unsigned int *p, unsigned int val);
++_CLC_OVERLOAD _CLC_DECL int atom_or(volatile local int *p, int val);
++_CLC_OVERLOAD _CLC_DECL unsigned int atom_or(volatile local unsigned int *p, unsigned int val);
+diff --git a/generic/include/clc/cl_khr_local_int32_extended_atomics/atom_xor.h b/generic/include/clc/cl_khr_local_int32_extended_atomics/atom_xor.h
+index e6c9f2f..fedf128 100644
+--- a/generic/include/clc/cl_khr_local_int32_extended_atomics/atom_xor.h
++++ b/generic/include/clc/cl_khr_local_int32_extended_atomics/atom_xor.h
+@@ -1,2 +1,2 @@
+-_CLC_OVERLOAD _CLC_DECL int atom_xor(local int *p, int val);
+-_CLC_OVERLOAD _CLC_DECL unsigned int atom_xor(local unsigned int *p, unsigned int val);
++_CLC_OVERLOAD _CLC_DECL int atom_xor(volatile local int *p, int val);
++_CLC_OVERLOAD _CLC_DECL unsigned int atom_xor(volatile local unsigned int *p, unsigned int val);
+diff --git a/generic/lib/cl_khr_global_int32_base_atomics/atom_add.cl b/generic/lib/cl_khr_global_int32_base_atomics/atom_add.cl
+index 9151b0c..c0c14d3 100644
+--- a/generic/lib/cl_khr_global_int32_base_atomics/atom_add.cl
++++ b/generic/lib/cl_khr_global_int32_base_atomics/atom_add.cl
+@@ -1,7 +1,7 @@
+ #include <clc/clc.h>
+ 
+ #define IMPL(TYPE) \
+-_CLC_OVERLOAD _CLC_DEF TYPE atom_add(global TYPE *p, TYPE val) { \
++_CLC_OVERLOAD _CLC_DEF TYPE atom_add(volatile global TYPE *p, TYPE val) { \
+   return atomic_add(p, val); \
+ }
+ 
+diff --git a/generic/lib/cl_khr_global_int32_base_atomics/atom_cmpxchg.cl b/generic/lib/cl_khr_global_int32_base_atomics/atom_cmpxchg.cl
+index 7647740..becf767 100644
+--- a/generic/lib/cl_khr_global_int32_base_atomics/atom_cmpxchg.cl
++++ b/generic/lib/cl_khr_global_int32_base_atomics/atom_cmpxchg.cl
+@@ -1,7 +1,7 @@
+ #include <clc/clc.h>
+ 
+ #define IMPL(TYPE) \
+-_CLC_OVERLOAD _CLC_DEF TYPE atom_cmpxchg(global TYPE *p, TYPE cmp, TYPE val) { \
++_CLC_OVERLOAD _CLC_DEF TYPE atom_cmpxchg(volatile global TYPE *p, TYPE cmp, TYPE val) { \
+   return atomic_cmpxchg(p, cmp, val); \
+ }
+ 
+diff --git a/generic/lib/cl_khr_global_int32_base_atomics/atom_dec.cl b/generic/lib/cl_khr_global_int32_base_atomics/atom_dec.cl
+index cc24d2f..411ed30 100644
+--- a/generic/lib/cl_khr_global_int32_base_atomics/atom_dec.cl
++++ b/generic/lib/cl_khr_global_int32_base_atomics/atom_dec.cl
+@@ -1,7 +1,7 @@
+ #include <clc/clc.h>
+ 
+ #define IMPL(TYPE) \
+-_CLC_OVERLOAD _CLC_DEF TYPE atom_dec(global TYPE *p) { \
++_CLC_OVERLOAD _CLC_DEF TYPE atom_dec(volatile global TYPE *p) { \
+   return atom_sub(p, (TYPE)1); \
+ }
+ 
+diff --git a/generic/lib/cl_khr_global_int32_base_atomics/atom_sub.cl b/generic/lib/cl_khr_global_int32_base_atomics/atom_sub.cl
+index 7faa3cc..772fca8 100644
+--- a/generic/lib/cl_khr_global_int32_base_atomics/atom_sub.cl
++++ b/generic/lib/cl_khr_global_int32_base_atomics/atom_sub.cl
+@@ -1,7 +1,7 @@
+ #include <clc/clc.h>
+ 
+ #define IMPL(TYPE) \
+-_CLC_OVERLOAD _CLC_DEF TYPE atom_sub(global TYPE *p, TYPE val) { \
++_CLC_OVERLOAD _CLC_DEF TYPE atom_sub(volatile global TYPE *p, TYPE val) { \
+   return atomic_sub(p, val); \
+ }
+ 
+diff --git a/generic/lib/cl_khr_global_int32_base_atomics/atom_xchg.cl b/generic/lib/cl_khr_global_int32_base_atomics/atom_xchg.cl
+index 9c77db1..eb1fdcc 100644
+--- a/generic/lib/cl_khr_global_int32_base_atomics/atom_xchg.cl
++++ b/generic/lib/cl_khr_global_int32_base_atomics/atom_xchg.cl
+@@ -1,7 +1,7 @@
+ #include <clc/clc.h>
+ 
+ #define IMPL(TYPE) \
+-_CLC_OVERLOAD _CLC_DEF TYPE atom_xchg(global TYPE *p, TYPE val) { \
++_CLC_OVERLOAD _CLC_DEF TYPE atom_xchg(volatile global TYPE *p, TYPE val) { \
+   return atomic_xchg(p, val); \
+ }
+ 
+diff --git a/generic/lib/cl_khr_global_int32_extended_atomics/atom_and.cl b/generic/lib/cl_khr_global_int32_extended_atomics/atom_and.cl
+index e587969..e7d70ea 100644
+--- a/generic/lib/cl_khr_global_int32_extended_atomics/atom_and.cl
++++ b/generic/lib/cl_khr_global_int32_extended_atomics/atom_and.cl
+@@ -1,9 +1,9 @@
+ #include <clc/clc.h>
+ 
+ #define IMPL(TYPE) \
+-_CLC_OVERLOAD _CLC_DEF TYPE atom_and(global TYPE *p, TYPE val) { \
++_CLC_OVERLOAD _CLC_DEF TYPE atom_and(volatile global TYPE *p, TYPE val) { \
+   return atomic_and(p, val); \
+ }
+ 
+ IMPL(int)
+-IMPL(unsigned int)
+\ No newline at end of file
++IMPL(unsigned int)
+diff --git a/generic/lib/cl_khr_global_int32_extended_atomics/atom_max.cl b/generic/lib/cl_khr_global_int32_extended_atomics/atom_max.cl
+index 09177ed..a741b18 100644
+--- a/generic/lib/cl_khr_global_int32_extended_atomics/atom_max.cl
++++ b/generic/lib/cl_khr_global_int32_extended_atomics/atom_max.cl
+@@ -1,7 +1,7 @@
+ #include <clc/clc.h>
+ 
+ #define IMPL(TYPE) \
+-_CLC_OVERLOAD _CLC_DEF TYPE atom_max(global TYPE *p, TYPE val) { \
++_CLC_OVERLOAD _CLC_DEF TYPE atom_max(volatile global TYPE *p, TYPE val) { \
+   return atomic_max(p, val); \
+ }
+ 
+diff --git a/generic/lib/cl_khr_global_int32_extended_atomics/atom_min.cl b/generic/lib/cl_khr_global_int32_extended_atomics/atom_min.cl
+index 277c41b..f996526 100644
+--- a/generic/lib/cl_khr_global_int32_extended_atomics/atom_min.cl
++++ b/generic/lib/cl_khr_global_int32_extended_atomics/atom_min.cl
+@@ -1,7 +1,7 @@
+ #include <clc/clc.h>
+ 
+ #define IMPL(TYPE) \
+-_CLC_OVERLOAD _CLC_DEF TYPE atom_min(global TYPE *p, TYPE val) { \
++_CLC_OVERLOAD _CLC_DEF TYPE atom_min(volatile global TYPE *p, TYPE val) { \
+   return atomic_min(p, val); \
+ }
+ 
+diff --git a/generic/lib/cl_khr_global_int32_extended_atomics/atom_or.cl b/generic/lib/cl_khr_global_int32_extended_atomics/atom_or.cl
+index a936a8e..810d669 100644
+--- a/generic/lib/cl_khr_global_int32_extended_atomics/atom_or.cl
++++ b/generic/lib/cl_khr_global_int32_extended_atomics/atom_or.cl
+@@ -1,7 +1,7 @@
+ #include <clc/clc.h>
+ 
+ #define IMPL(TYPE) \
+-_CLC_OVERLOAD _CLC_DEF TYPE atom_or(global TYPE *p, TYPE val) { \
++_CLC_OVERLOAD _CLC_DEF TYPE atom_or(volatile global TYPE *p, TYPE val) { \
+   return atomic_or(p, val); \
+ }
+ 
+diff --git a/generic/lib/cl_khr_global_int32_extended_atomics/atom_xor.cl b/generic/lib/cl_khr_global_int32_extended_atomics/atom_xor.cl
+index 1a8e350..9dc5803 100644
+--- a/generic/lib/cl_khr_global_int32_extended_atomics/atom_xor.cl
++++ b/generic/lib/cl_khr_global_int32_extended_atomics/atom_xor.cl
+@@ -1,7 +1,7 @@
+ #include <clc/clc.h>
+ 
+ #define IMPL(TYPE) \
+-_CLC_OVERLOAD _CLC_DEF TYPE atom_xor(global TYPE *p, TYPE val) { \
++_CLC_OVERLOAD _CLC_DEF TYPE atom_xor(volatile global TYPE *p, TYPE val) { \
+   return atomic_xor(p, val); \
+ }
+ 
+diff --git a/generic/lib/cl_khr_local_int32_base_atomics/atom_add.cl b/generic/lib/cl_khr_local_int32_base_atomics/atom_add.cl
+index a5dea18..3ad364d 100644
+--- a/generic/lib/cl_khr_local_int32_base_atomics/atom_add.cl
++++ b/generic/lib/cl_khr_local_int32_base_atomics/atom_add.cl
+@@ -1,7 +1,7 @@
+ #include <clc/clc.h>
+ 
+ #define IMPL(TYPE) \
+-_CLC_OVERLOAD _CLC_DEF TYPE atom_add(local TYPE *p, TYPE val) { \
++_CLC_OVERLOAD _CLC_DEF TYPE atom_add(volatile local TYPE *p, TYPE val) { \
+   return atomic_add(p, val); \
+ }
+ 
+diff --git a/generic/lib/cl_khr_local_int32_base_atomics/atom_cmpxchg.cl b/generic/lib/cl_khr_local_int32_base_atomics/atom_cmpxchg.cl
+index 16e9579..ea648f0 100644
+--- a/generic/lib/cl_khr_local_int32_base_atomics/atom_cmpxchg.cl
++++ b/generic/lib/cl_khr_local_int32_base_atomics/atom_cmpxchg.cl
+@@ -1,7 +1,7 @@
+ #include <clc/clc.h>
+ 
+ #define IMPL(TYPE) \
+-_CLC_OVERLOAD _CLC_DEF TYPE atom_cmpxchg(local TYPE *p, TYPE cmp, TYPE val) { \
++_CLC_OVERLOAD _CLC_DEF TYPE atom_cmpxchg(volatile local TYPE *p, TYPE cmp, TYPE val) { \
+   return atomic_cmpxchg(p, cmp, val); \
+ }
+ 
+diff --git a/generic/lib/cl_khr_local_int32_base_atomics/atom_dec.cl b/generic/lib/cl_khr_local_int32_base_atomics/atom_dec.cl
+index cfb3d80..7c4f89b 100644
+--- a/generic/lib/cl_khr_local_int32_base_atomics/atom_dec.cl
++++ b/generic/lib/cl_khr_local_int32_base_atomics/atom_dec.cl
+@@ -1,7 +1,7 @@
+ #include <clc/clc.h>
+ 
+ #define IMPL(TYPE) \
+-_CLC_OVERLOAD _CLC_DEF TYPE atom_dec(local TYPE *p) { \
++_CLC_OVERLOAD _CLC_DEF TYPE atom_dec(volatile local TYPE *p) { \
+   return atom_sub(p, (TYPE)1); \
+ }
+ 
+diff --git a/generic/lib/cl_khr_local_int32_base_atomics/atom_sub.cl b/generic/lib/cl_khr_local_int32_base_atomics/atom_sub.cl
+index c96696a..b5f64a1 100644
+--- a/generic/lib/cl_khr_local_int32_base_atomics/atom_sub.cl
++++ b/generic/lib/cl_khr_local_int32_base_atomics/atom_sub.cl
+@@ -1,7 +1,7 @@
+ #include <clc/clc.h>
+ 
+ #define IMPL(TYPE) \
+-_CLC_OVERLOAD _CLC_DEF TYPE atom_sub(local TYPE *p, TYPE val) { \
++_CLC_OVERLOAD _CLC_DEF TYPE atom_sub(volatile local TYPE *p, TYPE val) { \
+   return atomic_sub(p, val); \
+ }
+ 
+diff --git a/generic/lib/cl_khr_local_int32_base_atomics/atom_xchg.cl b/generic/lib/cl_khr_local_int32_base_atomics/atom_xchg.cl
+index 7d4bcca..f2007d8 100644
+--- a/generic/lib/cl_khr_local_int32_base_atomics/atom_xchg.cl
++++ b/generic/lib/cl_khr_local_int32_base_atomics/atom_xchg.cl
+@@ -1,7 +1,7 @@
+ #include <clc/clc.h>
+ 
+ #define IMPL(TYPE) \
+-_CLC_OVERLOAD _CLC_DEF TYPE atom_xchg(local TYPE *p, TYPE val) { \
++_CLC_OVERLOAD _CLC_DEF TYPE atom_xchg(volatile local TYPE *p, TYPE val) { \
+   return atomic_xchg(p, val); \
+ }
+ 
+diff --git a/generic/lib/cl_khr_local_int32_extended_atomics/atom_and.cl b/generic/lib/cl_khr_local_int32_extended_atomics/atom_and.cl
+index 180103a..7e97ad1 100644
+--- a/generic/lib/cl_khr_local_int32_extended_atomics/atom_and.cl
++++ b/generic/lib/cl_khr_local_int32_extended_atomics/atom_and.cl
+@@ -1,9 +1,9 @@
+ #include <clc/clc.h>
+ 
+ #define IMPL(TYPE) \
+-_CLC_OVERLOAD _CLC_DEF TYPE atom_and(local TYPE *p, TYPE val) { \
++_CLC_OVERLOAD _CLC_DEF TYPE atom_and(volatile local TYPE *p, TYPE val) { \
+   return atomic_and(p, val); \
+ }
+ 
+ IMPL(int)
+-IMPL(unsigned int)
+\ No newline at end of file
++IMPL(unsigned int)
+diff --git a/generic/lib/cl_khr_local_int32_extended_atomics/atom_max.cl b/generic/lib/cl_khr_local_int32_extended_atomics/atom_max.cl
+index b90301b..c019646 100644
+--- a/generic/lib/cl_khr_local_int32_extended_atomics/atom_max.cl
++++ b/generic/lib/cl_khr_local_int32_extended_atomics/atom_max.cl
+@@ -1,7 +1,7 @@
+ #include <clc/clc.h>
+ 
+ #define IMPL(TYPE) \
+-_CLC_OVERLOAD _CLC_DEF TYPE atom_max(local TYPE *p, TYPE val) { \
++_CLC_OVERLOAD _CLC_DEF TYPE atom_max(volatile local TYPE *p, TYPE val) { \
+   return atomic_max(p, val); \
+ }
+ 
+diff --git a/generic/lib/cl_khr_local_int32_extended_atomics/atom_min.cl b/generic/lib/cl_khr_local_int32_extended_atomics/atom_min.cl
+index 3acedd8..77482f7 100644
+--- a/generic/lib/cl_khr_local_int32_extended_atomics/atom_min.cl
++++ b/generic/lib/cl_khr_local_int32_extended_atomics/atom_min.cl
+@@ -1,7 +1,7 @@
+ #include <clc/clc.h>
+ 
+ #define IMPL(TYPE) \
+-_CLC_OVERLOAD _CLC_DEF TYPE atom_min(local TYPE *p, TYPE val) { \
++_CLC_OVERLOAD _CLC_DEF TYPE atom_min(volatile local TYPE *p, TYPE val) { \
+   return atomic_min(p, val); \
+ }
+ 
+diff --git a/generic/lib/cl_khr_local_int32_extended_atomics/atom_or.cl b/generic/lib/cl_khr_local_int32_extended_atomics/atom_or.cl
+index 338ff2c..d9a12c7 100644
+--- a/generic/lib/cl_khr_local_int32_extended_atomics/atom_or.cl
++++ b/generic/lib/cl_khr_local_int32_extended_atomics/atom_or.cl
+@@ -1,7 +1,7 @@
+ #include <clc/clc.h>
+ 
+ #define IMPL(TYPE) \
+-_CLC_OVERLOAD _CLC_DEF TYPE atom_or(local TYPE *p, TYPE val) { \
++_CLC_OVERLOAD _CLC_DEF TYPE atom_or(volatile local TYPE *p, TYPE val) { \
+   return atomic_or(p, val); \
+ }
+ 
+diff --git a/generic/lib/cl_khr_local_int32_extended_atomics/atom_xor.cl b/generic/lib/cl_khr_local_int32_extended_atomics/atom_xor.cl
+index 51ae3c0..ee40bff 100644
+--- a/generic/lib/cl_khr_local_int32_extended_atomics/atom_xor.cl
++++ b/generic/lib/cl_khr_local_int32_extended_atomics/atom_xor.cl
+@@ -1,7 +1,7 @@
+ #include <clc/clc.h>
+ 
+ #define IMPL(TYPE) \
+-_CLC_OVERLOAD _CLC_DEF TYPE atom_xor(local TYPE *p, TYPE val) { \
++_CLC_OVERLOAD _CLC_DEF TYPE atom_xor(volatile local TYPE *p, TYPE val) { \
+   return atomic_xor(p, val); \
+ }
+ 
